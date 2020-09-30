@@ -6,11 +6,10 @@ STATES = ['spices', 'drinks', 'fruits', 'dairy', 'checkout']
 
 # Transition matrix
 p = {
-    'checkout': [0.0, 0.0, 0.0, 0.0, 0.0],
-    'dairy': [0.246056,	0.736919, 0.107341, 0.070119, 0.145906],
-    'drinks': [0.282594, 0.005964, 0.598602, 0.067364, 0.134756],
-    'fruit': [0.344479, 0.068696, 0.071869, 0.597072, 0.102899],
-    'spices': [0.126871, 0.068246, 0.105285, 0.045251, 0.402198]
+    'dairy':  [0.102678, 0.736919, 0.058737, 0.050129, 0.051536],
+    'drinks': [0.215505, 0.010899, 0.598602, 0.088012, 0.086983],
+    'fruit':  [0.201054, 0.096081, 0.055005, 0.597025, 0.050834],
+    'spices': [0.149888, 0.193214, 0.163109, 0.091590, 0.402198]
 }
 
 class Customer: 
@@ -22,20 +21,28 @@ class Customer:
     
     '''
     
-    def __init__(self,customer_no):
+    def __init__(self,customer_id):
+        self.customer_id = customer_id
+        self.current_location = 'entrance' 
+        self.result = ['entrance']
 
-        self.customer_no = customer_no
-        self.state = 'dairy' 
-        self.state_history = ['dairy']
+
 
 
     def change_location(self):
+
         '''
         Method of the Customer class to change the current_location.
         '''
-        self.current_location = np.random.choice(STATES,1, p)[0]
+        while self.current_location != 'checkout':
+
+            # predict the next move
+            self.current_location = np.random.choice(STATES,1, p)[0]
+            self.result.append(self.current_location)
+
+    # print(self.result)
     
     def __repr__(self):
-        return f"The customer number {self.customer_no} is at {self.state}"
+        return f"The customer number {self.customer_id} is at {self.current_location}"
 
 
