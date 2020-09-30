@@ -101,8 +101,8 @@ class Customer:
         return f'This is a customer that went in a store with the sections: {self.init_state_space} and they went like this: {self.journey}.'
 
 
-c1 = Customer(market, tiles, 3, 7)
-c1.draw(tiles)
+c1 = Customer(market, 'f', 3, 7)
+
 
 
 
