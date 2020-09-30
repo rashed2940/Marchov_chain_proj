@@ -16,7 +16,7 @@ MARKET = """
 ##..e#..#b..#d..##
 ##...............#
 ##..C#..C#..C#...#
-##..##..##..##...#
+##..##..##..#h...#
 ##...............#
 ##############GG##
 """.strip()
@@ -85,10 +85,26 @@ tiles = cv2.imread('/home/skywalker/Marchov_chain_proj/tiles.png')
 
 market = SupermarketMap(MARKET, tiles)
 
-L = np.array([13,3])
+#tmap = SupermarketMap('f',tiles)
+
+class Customer:
+
+    def __init__(self, tmap, image, x, y):
+         ...
+
+    def draw(self, frame):
+        xpos = OFS + self.x * TILE_SIZE
+        ypos = OFS + self.y * TILE_SIZE
+        frame[ypos:8*32, xpos: 12*32] = self.image
+        
+    def __repr__(self):
+        return f'This is a customer that went in a store with the sections: {self.init_state_space} and they went like this: {self.journey}.'
 
 
-tmap = SupermarketMap('G', )
+c1 = Customer(market, tiles, 3, 7)
+c1.draw(tiles)
+
+
 
 while True:
     frame = background.copy()
@@ -105,15 +121,3 @@ cv2.destroyAllWindows()
 market.write_image("supermarket.png")
 
 
-class Customer:
-
-    def __init__(self, tmap, image, x, y):
-         ...
-
-    def draw(self, frame):
-        xpos = OFS + self.x * TILE_SIZE
-        ypos = ...
-        frame[ypos:..., xpos: ...] = self.image
-        
-    def __repr__(self):
-        return f'This is a customer that went in a store with the sections: {self.init_state_space} and they went like this: {self.journey}.'
