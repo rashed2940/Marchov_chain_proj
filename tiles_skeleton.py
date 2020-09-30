@@ -90,25 +90,27 @@ market = SupermarketMap(MARKET, tiles)
 class Customer:
 
     def __init__(self, tmap, image, x, y):
-         ...
-
+         self.x = x
+         self.y = y
+         self.image = image
+         
     def draw(self, frame):
         xpos = OFS + self.x * TILE_SIZE
         ypos = OFS + self.y * TILE_SIZE
-        frame[ypos:8*32, xpos: 12*32] = self.image
+        frame[ypos:ypos+57, xpos:xpos+57] = self.image
         
     def __repr__(self):
         return f'This is a customer that went in a store with the sections: {self.init_state_space} and they went like this: {self.journey}.'
 
 
-c1 = Customer(market, 'f', 3, 7)
+c1 = Customer(market, (7,0), 3, 7)
 
 
 
 
 while True:
     frame = background.copy()
-    market.draw(frame)
+    c1.draw(frame)
 
     cv2.imshow('frame', frame)
 
@@ -118,6 +120,6 @@ while True:
 
 cv2.destroyAllWindows()
 
-market.write_image("supermarket.png")
+c1.write_image("supermarket.png")
 
 
