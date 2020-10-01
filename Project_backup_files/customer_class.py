@@ -8,7 +8,7 @@ STATES = ['spices', 'drinks', 'fruits', 'dairy', 'checkout']
 p = {
     'dairy':  [0.102678, 0.736919, 0.058737, 0.050129, 0.051536],
     'drinks': [0.215505, 0.010899, 0.598602, 0.088012, 0.086983],
-    'fruit':  [0.201054, 0.096081, 0.055005, 0.597025, 0.050834],
+    'fruits':  [0.201054, 0.096081, 0.055005, 0.597025, 0.050834],
     'spices': [0.149888, 0.193214, 0.163109, 0.091590, 0.402198]
 }
 
@@ -25,8 +25,6 @@ class Customer:
         self.customer_id = customer_id
         self.current_location = 'entrance' 
         self.result = ['entrance']
-
-
 
 
     def change_location(self):
