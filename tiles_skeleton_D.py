@@ -71,7 +71,7 @@ class SupermarketMap:
     def draw(self, frame, offset=OFS):
         """
         draws the image into a frame
-        offset pixels from the top left corner
+        offset pixels from the top left corner (not starting from the edge of sctreen)
         """
         frame[OFS:OFS+self.image.shape[0], OFS:OFS+self.image.shape[1]] = self.image
        
@@ -91,17 +91,17 @@ market = SupermarketMap(MARKET, tiles)
 
 class Customer:
 
-    def __init__(self, frame,  x, y):
+    def __init__(self, market,  x, y):
          self.x = x
          self.y = y
          self.image = np.zeros((32, 32,3), dtype=np.uint8)
-         self.frame = frame
+         self.market = market
          
     def draw(self,frame):
         
         xpos = OFS + self.x * TILE_SIZE
         ypos = OFS + self.y * TILE_SIZE
-        self.frame[ ypos : ypos+ TILE_SIZE ,  xpos: xpos+ TILE_SIZE] = self.image
+        frame[ ypos : ypos+ TILE_SIZE ,  xpos: xpos+ TILE_SIZE] = self.image
         
         
     def __repr__(self):
@@ -116,6 +116,8 @@ c1 = Customer(market, 3, 7)
 while True:
     frame = background.copy()
     #frame = c1.draw()
+   
+    market.draw(frame)
     c1.draw(frame)
     #market_background = market.draw()
     
@@ -128,6 +130,6 @@ while True:
 
 cv2.destroyAllWindows()
 
-frame.write_image("supermarket.png")
+#frame.write_image("supermarket.png")
 
 
