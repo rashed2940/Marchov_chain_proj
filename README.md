@@ -11,6 +11,16 @@ Our aim is to provide an insights regarding the questions of how many people for
 ## [Dataset description](http://krspiced.pythonanywhere.com/chapters/project_markov/data_analysis.html#explore-supermarket-data):
 Our dataset is imaginary dataset of all DOODLE customers in 5 days of the week. It has information about time that  customer is present at each section of supermarket, date, sections that customer visits while shopping, and imaginary price of each product.
 
+
+## [Simulation]:
+In this simulation we visualized how 5 random customers can enter a supermarket and which sections of super market is their aim for visiting.
+
+
+<p align="center">
+  <img src="/Project_files/tmp/customer_simulation.gif"   title = "5 customers in supermarket">
+</p>
+
+
 ## Our answeres to business questions:
 * Calculate the total number of customers in each section
 
