@@ -10,7 +10,7 @@ We are an international team of passionate data scientist, online participants, 
 By participating in this project, we hope to challenge ourselves and our learnings to provide a monte carlo marchov chain simulation of a supermarket.
 Our aim is to provide an insights regarding the questions of how many people for how long can be in the supermarket at the same time wandering around different aisles. We plan to do EDA analysis on our dataset to gain knowledge about the business questions. Then with Object Oriented Programming and with the help of OpenCV library we tried to simulate the movement of customers inside the supermarket. 
 
-## [Dataset description](http://krspiced.pythonanywhere.com/chapters/project_markov/data_analysis.html#explore-supermarket-data):
+## [Dataset description](https://github.com/rashed2940/Marchov_chain_proj/tree/master/Data):
 Our dataset is imaginary dataset of all DOODLE customers in 5 days of the week. It has information about time that  customer is present at each section of supermarket, date, sections that customer visits while shopping, and imaginary price of each product.
 
 
