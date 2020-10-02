@@ -49,13 +49,13 @@ In this simulation we visualized how 5 random customers can enter a supermarket 
 
  - fisrt visiting section distributions
 <p align="center">
-  <img src="/images/first_dist.png"  title = "distribution of first visiting sections">
+  <img src="/images/new_first_dist.png"  title = "distribution of first visiting sections">
 </p>
 
 - following visiting sections distributions
 
 <p align="center">
-<img src="/images/follow_dist.png"  title = "Cdistribution of following visiting sections">
+<img src="/images/new_follow_dist.png"  title = "Cdistribution of following visiting sections">
 </p>
 
 
