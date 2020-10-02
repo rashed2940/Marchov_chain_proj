@@ -1,6 +1,8 @@
 # Marchov_chain_proj
 
 
+![Customer Simulation](https://img.shields.io/badge/Customer%20Simulation-passing-181717?style=plastic&logo=github&labelColor=black&color=green)
+
 ## Our team:
 We are an international team of passionate data scientist, online participants, at Spiced Academy. We call ourselves team **rebels of Munich**, Germany. [Rashed](https://github.com/rashed2940), and [Diana](https://github.com/dian-ai)
 
