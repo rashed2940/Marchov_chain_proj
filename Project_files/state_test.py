@@ -20,7 +20,7 @@ def save_predicted_state(Nb_customers):
         #Create new customer
         new_customer = Customer(customer_id)
         #Assign a random colour
-        colors = list(np.random.choice(range(256), size=3))
+        color = list(np.random.choice(range(256), size=3))
 
 
         new_customer.change_location()
@@ -29,21 +29,21 @@ def save_predicted_state(Nb_customers):
 
         for s_nb,s in enumerate(states):
 
-            #Load picture to plot the customer position at each state
+            #Read the market picture to plot the customer position at each state
             frame = cv2.imread('./images/market.png')
 
             if s == 'entrance':
-                frame[550:640, 730:820] = colors
+                frame[550:640, 730:820] = color
             elif s == 'checkout':
-                frame[590:680, 205:295] = colors
+                frame[590:680, 205:295] = color
             elif s == 'dairy':
-                frame[220:310, 310:400] = colors
+                frame[220:310, 310:400] = color
             elif s == 'drinks':
-                frame[220:310, 80:170] = colors
+                frame[220:310, 80:170] = color
             elif s == 'fruits':
-                frame[220:310, 770:860] = colors
+                frame[220:310, 770:860] = color
             elif s == 'spices':
-                frame[220:310, 540:630] = colors
+                frame[220:310, 540:630] = color
             else:
                 print('This state is not there')
 
