@@ -12,7 +12,7 @@ Our aim is to provide an insights regarding the questions of how many people for
 Our dataset is imaginary dataset of all DOODLE customers in 5 days of the week. It has information about time that  customer is present at each section of supermarket, date, sections that customer visits while shopping, and imaginary price of each product.
 
 
-## [Simulation]:
+## Simulation:
 In this simulation we visualized how 5 random customers can enter a supermarket and which sections of super market is their aim for visiting.
 
 
@@ -78,3 +78,10 @@ In this simulation we visualized how 5 random customers can enter a supermarket 
 
 
 
+---
+
+## Outlook:
+- Adding pathfinder
+- Creating supermarket with shelves
+- Adding customer into supermarket simultaneously
+- Simulate their sequential movements
